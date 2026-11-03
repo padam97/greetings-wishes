@@ -39,8 +39,12 @@ input{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:12
 #toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:8px 18px;border-radius:20px;opacity:0;transition:.3s;pointer-events:none}
 #toast.show{opacity:1}
 </style>
-</head>
-<body>
+</<link rel="manifest" href="manifest.json">head>
+<body><script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
+</script>
 <header>
   <h1>उखान टुक्का र शुभकामना</h1>
   <div class="sub"><span id="st">अफलाइन चल्छ</span><button id="inst">एप इन्स्टल गर्नुहोस्</button></div>
@@ -51,9 +55,9 @@ input{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:12
   <input id="q" type="search" placeholder="खोज्नुहोस्...">
   <div class="chips" id="chips"><button class="on" data-c="सबै">सबै (32)</button><button class="" data-c="उखान">उखान (25)</button><button class="" data-c="भनाइ">भनाइ (7)</button></div>
   <div id="list"><div class="card"><span class="tag">उखान</span>
-    <div class="t">थोपा थोपाले घडा भरिन्छ</div><div class="m">सानो सानो प्रयास र बचतले ठूलो उपलब्धि बन्छ।</div>
-    <div class="act"><button data-a="copy" data-k="U|थोपा थोपाले घडा भरिन्छ">कपी</button><button data-a="share" data-k="U|थोपा थोपाले घडा भरिन्छ">सेयर</button>
-    <button data-a="fav" data-k="U|थोपा थोपाले घडा भरिन्छ">♡</button></div></div><div class="card"><span class="tag">उखान</span>
+    <div class="t">थोपा थोपाले घैला भरिन्छ</div><div class="m">सानो सानो प्रयास र बचतले ठूलो उपलब्धि बन्छ।</div>
+    <div class="act"><button data-a="copy" data-k="U|थोपा थोपाले घैला भरिन्छ">कपी</button><button data-a="share" data-k="U|थोपा थोपाले घैलाा भरिन्छ">सेयर</button>
+    <button data-a="fav" data-k="U|थोपा थोपाले घैलाा भरिन्छ">♡</button></div></div><div class="card"><span class="tag">उखान</span>
     <div class="t">एक हातले ताली बज्दैन</div><div class="m">झगडा वा काम एक्लैबाट हुँदैन, दुवै पक्षको भूमिका हुन्छ।</div>
     <div class="act"><button data-a="copy" data-k="U|एक हातले ताली बज्दैन">कपी</button><button data-a="share" data-k="U|एक हातले ताली बज्दैन">सेयर</button>
     <button data-a="fav" data-k="U|एक हातले ताली बज्दैन">♡</button></div></div><div class="card"><span class="tag">उखान</span>
@@ -72,9 +76,9 @@ input{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:12
     <div class="t">जे रोप्यो त्यही फल्छ</div><div class="m">जस्तो काम गर्‍यो त्यस्तै नतिजा पाइन्छ।</div>
     <div class="act"><button data-a="copy" data-k="U|जे रोप्यो त्यही फल्छ">कपी</button><button data-a="share" data-k="U|जे रोप्यो त्यही फल्छ">सेयर</button>
     <button data-a="fav" data-k="U|जे रोप्यो त्यही फल्छ">♡</button></div></div><div class="card"><span class="tag">उखान</span>
-    <div class="t">अधजल गगरी छचल्कन्छ</div><div class="m">थोरै ज्ञान भएकाले धेरै देखावटी गर्नु।</div>
-    <div class="act"><button data-a="copy" data-k="U|अधजल गगरी छचल्कन्छ">कपी</button><button data-a="share" data-k="U|अधजल गगरी छचल्कन्छ">सेयर</button>
-    <button data-a="fav" data-k="U|अधजल गगरी छचल्कन्छ">♡</button></div></div><div class="card"><span class="tag">उखान</span>
+    <div class="t">आधि गाग्री पानी छचल्कन्छ</div><div class="m">थोरै ज्ञान भएकाले धेरै देखावटी गर्नु।</div>
+    <div class="act"><button data-a="copy" data-k="U|आधि गाग्री पानि छचल्कन्छ">कपी</button><button data-a="share" data-k="U|आधि गाग्री पानी छचल्कन्छ">सेयर</button>
+    <button data-a="fav" data-k="U|आधि गाग्री पानी छचल्कन्छ">♡</button></div></div><div class="card"><span class="tag">उखान</span>
     <div class="t">फलेको रुख झुक्छ</div><div class="m">ज्ञानी र सम्पन्न व्यक्ति विनम्र हुन्छ।</div>
     <div class="act"><button data-a="copy" data-k="U|फलेको रुख झुक्छ">कपी</button><button data-a="share" data-k="U|फलेको रुख झुक्छ">सेयर</button>
     <button data-a="fav" data-k="U|फलेको रुख झुक्छ">♡</button></div></div><div class="card"><span class="tag">उखान</span>
@@ -154,14 +158,14 @@ input{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:12
 <script id="data">
 /* ===== उखान: [उखान, अर्थ, वर्ग(ऐच्छिक)] ===== */
 const UKHAN=[
-["थोपा थोपाले घडा भरिन्छ","सानो सानो प्रयास र बचतले ठूलो उपलब्धि बन्छ।"],
+["थोपा थोपाले घैला भरिन्छ","सानो सानो प्रयास र बचतले ठूलो उपलब्धि बन्छ।"],
 ["एक हातले ताली बज्दैन","झगडा वा काम एक्लैबाट हुँदैन, दुवै पक्षको भूमिका हुन्छ।"],
 ["नाच्न नजान्ने आँगन टेढो","आफ्नो कमजोरी लुकाउन अरूलाई दोष दिनु।"],
 ["बाँदरको हातमा नरिवल","अयोग्य व्यक्तिको हातमा मूल्यवान् वस्तु पर्नु।"],
 ["अन्धाको देशमा कानो राजा","ज्ञानी नभएको ठाउँमा अलिकति जान्ने नै ठूलो ठहरिनु।"],
 ["हात्तीको देखाउने दाँत अर्कै, चपाउने अर्कै","बाहिर देखाउने र भित्र गर्ने कुरा फरक हुनु।"],
 ["जे रोप्यो त्यही फल्छ","जस्तो काम गर्‍यो त्यस्तै नतिजा पाइन्छ।"],
-["अधजल गगरी छचल्कन्छ","थोरै ज्ञान भएकाले धेरै देखावटी गर्नु।"],
+["आधि गाग्री पानी छचल्कन्छ","थोरै ज्ञान भएकाले धेरै देखावटी गर्नु।"],
 ["फलेको रुख झुक्छ","ज्ञानी र सम्पन्न व्यक्ति विनम्र हुन्छ।"],
 ["घामलाई हत्केलाले छेक्न सकिँदैन","सत्य कहिल्यै लुकाउन सकिँदैन।"],
 ["सङ्गतले रङ्गत","मान्छे जस्तो साथमा रहन्छ, त्यस्तै बन्छ।","भनाइ"],
@@ -579,32 +583,3 @@ render();
 
 
 
-{
-  "name": "उखान टुक्का र शुभकामना",
-  "short_name": "उखान-शुभकामना",
-  "start_url": "./index.html",
-  "scope": "./",
-  "display": "standalone",
-  "background_color": "#fff8ee",
-  "theme_color": "#7a1f2b",
-  "lang": "ne",
-  "icons": [
-    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
-  ]
-}
-
-const C = "ukhan-v1";
-const FILES = ["./", "index.html", "manifest.json", "icon.svg"];
-self.addEventListener("install", e =&gt; {
-  e.waitUntil(caches.open(C).then(c =&gt; c.addAll(FILES)));
-  self.skipWaiting();
-});
-self.addEventListener("activate", e =&gt; {
-  e.waitUntil(caches.keys().then(k =&gt; Promise.all(k.filter(x =&gt; x !== C).map(x =&gt; caches.delete(x)))));
-  self.clients.claim();
-});
-self.addEventListener("fetch", e =&gt; {
-  e.respondWith(caches.match(e.request).then(r =&gt; r || fetch(e.request).catch(() =&gt; caches.match("index.html"))));
-});
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="96" fill="#7a1f2b"></rect><text x="256" y="340" font-size="280" text-anchor="middle" fill="#e0b24f" font-family="sans-serif" font-weight="700">उ</text></svg></body></html>
